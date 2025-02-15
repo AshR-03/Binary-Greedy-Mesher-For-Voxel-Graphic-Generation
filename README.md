@@ -19,7 +19,7 @@ The importance of the project can be outlined by looking into the [Microprofiler
 We can significantly reduce the amount of computation time used when greedy meshing by using a `binary greedy mesher` [^1][^2] . This algorithm is designed based on a set of bitwise operations on rows of `16 bit` binary numbers. Below are the steps of the algorithm implemented in this project for 16x16 chunks:
 
   - Build a buffer sized `18 * 18 * 4 * 3`, which contains an `18x18` 32 bit grid for each of the `3` X, Y and Z axes. We place a 1 in the bit positions where on that local axis, there is a solid block. We use 18 bits per chunk as we are also accounting for neighbouring    edge blocks.
-  - Build a second buffer sized `18 * 18 * 4 * 3 * 2` which uses `bit32.band()`, `bit32.bnot()` and `bit32.rshift` bitwise operators to located the face edges for each axis. this `face location` buffer is `2x` the size of the buffer with the binary voxel data due to the     fact that each row of 32 bits will have a 2 faces on the same axis (6 faces for 3 axes).
+  - Build a second buffer sized `18 * 18 * 4 * 3 * 2` which uses `bit32.band()`, `bit32.bnot()` and `bit32.rshift()` bitwise operators to locate the face edges for each axis. this `face location` buffer is `2x` the size of the buffer with the binary voxel data due to the     fact that each row of 32 bits will have a 2 faces on the same axis (6 faces for 3 axes).
   - Once we have the `face location` buffer, we generate a set of `binary face planes` for each of the 6 directions on the 3 axes. We **remove the 2 edge cases** as we do not want to account for the `neighbouring chunk faces` in the greedy mesher. A visualisation of     
   `1/16 axis planes` can be seen in figure 2:
 
