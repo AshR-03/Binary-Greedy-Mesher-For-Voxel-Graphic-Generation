@@ -1,4 +1,4 @@
-# Binary-Greedy-Mesher-For-Voxel-Graphic-Generation
+# Binary-Greedy-Mesher-For-Voxel-Graphic-Generation-In-Lua
 
 In this project, I showcase a fast method of greedy meshing adjacent quad faces for Lua using bitwise operations, Binary [buffers](https://create.roblox.com/docs/reference/engine/libraries/buffer) and [Editable Mesh](https://create.roblox.com/docs/reference/engine/classes/EditableMesh) Objects to render an optimised voxel world.
 
