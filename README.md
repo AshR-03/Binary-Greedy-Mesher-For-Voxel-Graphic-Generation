@@ -57,6 +57,10 @@ Returning to the `Microprofiler`, we can see a dramatic `decrease in render time
 
 *Figure 4 - Final result of rendering the `Editable mesh` chunks. Blocks of the **same blocktype** are meshed **separately** from one another, whilst also minimizing the amount of **quads rendered**.*
 
+## Installation and Use
+
+To use the `binary greedy mesher` in your local projects, download the `projectFile.rbxl` and open the application in `Roblox Studio`.
+
 
 [^1]: Davis Morley, “Greedy Meshing Voxels Fast - Optimism in Design Handmade Seattle 2022,” YouTube, Feb. 01, 2023. https://www.youtube.com/watch?v=4xs66m1Of4A.
 [^2]: Tantan, “Blazingly Fast Greedy Mesher - Voxel Engine Optimizations,” YouTube, Apr. 19, 2024. https://www.youtube.com/watch?v=qnGoGq7DWMc.
